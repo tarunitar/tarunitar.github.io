@@ -100,7 +100,7 @@
   <h3>Where Am I?</h3>
 	<div class="row">
 		<div class="col-sm-4">
-			<p>I started college pursuing a B.S. in Bioengineering at the University of California, Merced. After two years of rigorous classes, I found myself more drawn towards programming, and in 2015 switched tracks to earn a B.S. in Computer Science and Engineering instead.</p>
+			<p>I started college pursuing a B.S. in Bioengineering at the University of California, Merced. After two years of BIOE classes, however, I fell in love with programming and in 2015 switched tracks to work on a B.S. in Computer Science and Engineering instead.</p>
 			<img src="find1.jpg" class="img-responsive img-circle" style="width:100%" alt="FindMe">
 		</div>
 		<div class="col-sm-4">
@@ -123,5 +123,27 @@
 <footer class="container-fluid text-center">
 	<h4><small>Made By <a href="http://tarunitar.github.io" target="_blank">Tarunraj Amuthan</a></small></h4> 
 </footer>
+<script>
+$(document).ready(function(){
+// Add smooth scrolling to all links in navbar + footer link
+$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    // Store hash
+    var hash = this.hash;
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 500, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+			});
+		} // End if 
+	});
+})
+</script>
 </body>
 </html>
